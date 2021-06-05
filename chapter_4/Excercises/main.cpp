@@ -278,8 +278,76 @@ void task_13_14_15_sieve(){
     }
 }
 
+void task_16(){
+
+    std::cout << "Enter a set of positive integers to find their mode" << std::endl;
+    std::vector<int> numberSet;
+    int number = 0;
+    int mode = 0;
+    int currentMax = 0;
+
+    while (!std::cin.fail()){
+        std::cin >> number;
+        numberSet.push_back(number);
+    }
+
+    for (auto i : numberSet){
+        int counter = 0;
+        for (auto j : numberSet) {
+            if (i == j) ++counter;
+        }
+        if (counter > currentMax) 
+        {
+            currentMax = counter;
+            mode = i;
+        }
+    }
+
+    std::cout << "The mode is: " << mode << std::endl;
+
+}
+
+void task_17(){
+
+    std::cout << "Enter a set of strings to find min, max, mode" << std::endl;
+    std::vector<std::string> stringSet;
+    std::string inputString, mode, currentMax, currentMin;
+    int counter;
+    int currentMode = 0;
+
+
+    while (1){
+        std::cin >> inputString;
+        if (inputString == "|"){
+            break;
+        }
+        else stringSet.push_back(inputString);
+    }
+
+    for (auto i : stringSet){
+        counter = 0;
+        for (auto j : stringSet) {
+            if (i == j) ++counter;
+        }
+        if (counter > currentMode) 
+        {
+            currentMode = counter;
+            mode = i;
+        }
+        if (i >= currentMax){
+            currentMax = i;
+        }
+        if (i <= currentMin || currentMin.empty()){
+            currentMin = i;
+        }
+    }
+
+    std::cout << "The min, max and mode is: " << currentMin << ", " << currentMax << ", " << mode << std::endl;
+
+}
+
 
 int main(int argc, char* argv[]){
-    task_13_14_15_sieve();
+    task_17();
     return 0;
 }
