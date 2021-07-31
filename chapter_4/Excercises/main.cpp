@@ -346,8 +346,22 @@ void task_17(){
 
 }
 
+void task_18(){
+    double a, b, c, x1, x2;
+    std::cout << "Enter a, b and c for quadratic expression ax^2 + bx + c = 0" << std::endl;
+    std::cin >> a >> b >> c;
+    double root = sqrt(b*b - 4 * a * c);
+    x1 = (-1 * b + root) / (2 * a);
+    x2 = (-1 * b - root) / (2 * a);
+    std::cout << "The roots x1 and x2 are: " << x1 << " " << x2 << std::endl;
+}
+
+void task_19(){
+    
+}
+
 
 int main(int argc, char* argv[]){
-    task_17();
+    task_18();
     return 0;
 }

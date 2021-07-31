@@ -1,5 +1,1 @@
-cmake_minimum_required(VERSION 3.16.3)
-
-project(censor_words)
-
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(censor_words_in_vector main.cpp)

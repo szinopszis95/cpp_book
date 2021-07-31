@@ -1,5 +1,1 @@
-cmake_minimum_required(VERSION 3.16.3)
-
-project(cpp_book_3.5)
-
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(3.5 main.cpp)
